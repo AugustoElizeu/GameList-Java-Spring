@@ -14,19 +14,20 @@ import jakarta.persistence.Table;
 public class GameList implements Serializable {
 
 	private static final long serialVersionUID = 1L;
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String list;
+	private String name;
 	
 	public GameList() {
 		
 	}
 
-	public GameList(Long id, String list) {
+	public GameList(Long id, String name) {
 		super();
 		this.id = id;
-		this.list = list;
+		this.name = name;
 	}
 
 	public Long getId() {
@@ -37,12 +38,12 @@ public class GameList implements Serializable {
 		this.id = id;
 	}
 
-	public String getList() {
-		return list;
+	public String getName() {
+		return name;
 	}
 
-	public void setList(String list) {
-		this.list = list;
+	public void setList(String name) {
+		this.name = name;
 	}
 
 	@Override
@@ -64,7 +65,7 @@ public class GameList implements Serializable {
 	
 	@Override
 	public String toString() {
-		return "GameList [id=" + id + ", list=" + list + "]";
+		return "GameList [id=" + id + ", list=" + name + "]";
 	}
 	
 	

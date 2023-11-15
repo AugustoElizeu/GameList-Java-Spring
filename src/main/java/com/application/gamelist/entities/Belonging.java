@@ -18,7 +18,6 @@ public class Belonging implements Serializable{
 	@EmbeddedId
 	private BelongingPk id = new BelongingPk();
 	private Integer position;
-	private Float desconto;
 	
 	public Belonging() {
 		
@@ -29,7 +28,6 @@ public class Belonging implements Serializable{
 		id.setGame(game);
 		id.setGameList(list);
 		this.position = position;
-		this.desconto = desconto;
 	}
 
 	public BelongingPk getId() {
@@ -48,14 +46,6 @@ public class Belonging implements Serializable{
 		this.position = position;
 	}
 
-	public Float getDesconto() {
-		return desconto;
-	}
-
-	public void setDesconto(Float desconto) {
-		this.desconto = desconto;
-	}
-
 	@Override
 	public int hashCode() {
 		return Objects.hash(id);
@@ -72,12 +62,5 @@ public class Belonging implements Serializable{
 		Belonging other = (Belonging) obj;
 		return Objects.equals(id, other.id);
 	}
-
-	@Override
-	public String toString() {
-		return "Belonging [id=" + id + ", position=" + position + ", desconto=" + desconto + "]";
-	}
-	
-	
 	
 }
